@@ -1,0 +1,299 @@
+/*
+Theme Name:   TMA97
+Description:  TMA97 wordpress theme
+Author:       Rony Murat
+Version:      1.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  tma97
+*/
+
+@import url(https://fonts.googleapis.com/css2?family=Teko&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Play&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Italianno&family=Yesteryear&display=swap);
+
+$title_font: 'Teko';
+$other_font: 'Play';
+$signature_font: 'Yesteryear';
+
+$auxcol: white;
+$strongblue: #74b4f0; // rgba(116, 180, 240, 1)
+$infoblue: #50e2ec;   // rgba(80, 226, 236, 1)
+$midblue: #4674b7;    // rgba(70, 116, 183, 1)
+$darkblue: #00132b;   // rgba(0, 19, 43, 1)
+$gold: #ffca47;       // rgba(255, 202, 71, 1)
+$pink: #9b1373;       // rgba(155, 19, 115, 1)
+
+$navbar_color: rgba(0, 19, 43, 0.8);
+$navbar_height: 56px;
+$anchor_offset: -61px;
+
+$hero_text_bg_col: rgba(44, 45, 46, 0.35);
+
+$footer_color: #1d1d1d;
+
+/* GLOBAL variables */
+html,body {
+    min-height:420px;
+}
+
+body {
+    background: $midblue;
+    background: url('https://tma97.com/wp-content/themes/tma97-helpers/assets/images/grid.svg'), fixed radial-gradient(ellipse, $midblue 0%, $darkblue 95%);
+    background-size: 950px, auto;
+    background-blend-mode: color, normal;
+}
+
+.container-fluid {
+    padding: 0 0;
+}
+
+//---------- TEXT COLORS/FONTS ----------//
+h1, h2, h3, h4 {
+    font-family: $title_font, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5em;
+    color: $strongblue;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+    color: $infoblue;
+}
+
+h4 {
+    color: $gold;
+    font-size: 2em;
+}
+
+.blue-col {
+    color: $infoblue;
+}
+
+.gold-col {
+    color: $gold;
+}
+
+.cover-inner p{
+    font-family: $other_font, sans-serif;
+    color: $auxcol;
+    font-size: 1.8em;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+main p {
+    color: $infoblue;
+    font-family: $other_font, sans-serif;
+    font-size: 1em;
+}
+
+#page-footer p {
+    color: $gold;
+    font-size: 1em;
+}
+
+// navbar
+.navbar-custom {
+    font-family: $other_font, sans-serif;
+    background: $navbar_color;
+}
+
+.navbar-custom .navbar-brand {
+    color: $strongblue;
+}
+
+.navbar-custom .navbar-brand:hover {
+    color: $strongblue;
+}
+
+.navbar-custom .navbar-text {
+    color: $strongblue;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: $strongblue;
+}
+
+.navbar-custom .nav-item .nav-link.active {
+    color: $gold !important;
+    text-decoration: none !important;
+}
+
+.navbar-custom .nav-item:hover .nav-link {
+    color: $infoblue;
+    text-decoration: none;
+}
+
+//---------- BACK COLORS ----------//
+.title {
+    color: $infoblue;
+    border-radius: 15px;
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: linear-gradient(90deg, rgb(187, 156, 178) 0%, rgba(116,180,240,0.5) 100%);
+
+}
+
+//---------- POSITIONNING ----------//
+// svg
+.svg-container {
+    position: relative;
+    overflow:hidden;
+}
+
+.svg-container-visible {
+    position: relative;
+    overflow:visible;
+}
+
+.svg-item {
+    position: absolute;
+}
+
+.layer-front {
+    z-index: 2;
+}
+
+.svg-small {
+    width: 18%;
+}
+
+@media (min-width: 576px) {
+    .svg-small {
+        width: 15%;
+    }
+}
+
+@media (min-width: 768px) {
+    .svg-small {
+        width: 25%;
+    }
+}
+
+@media (min-width: 992px) {
+    .svg-small {
+        width: 12%;
+    }
+}
+
+.svg-w-20 {
+    width: 20%;
+}
+
+.svg-full {
+    width: 100%;
+    height: 100%;
+}
+
+.border-tl {
+    top: 0;
+    left: 0;
+}
+
+.border-tr {
+    top: 0;
+    right: 0;
+}
+
+.border-br {
+    bottom: 0;
+    right: 0;
+}
+
+.border-bl {
+    bottom: 0;
+    left: 0;
+}
+
+.border-center-top {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.border-center-bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.border-center-left {
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+
+.border-center-right {
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+.svg-symbol {
+    display: none;
+}
+
+// navbar
+a.anchor {
+    display: block;
+    position: relative;
+    top: $anchor_offset;
+    visibility: hidden
+}
+
+// cover
+html, body, header{
+    height: 100%;
+    max-height: 1000px;
+}
+
+body {
+    margin-top: $navbar_height;
+}
+
+.site-wrapper {
+    min-height: 100%;
+}
+
+#cover-border {
+    min-height: 300px;
+}
+
+#page-footer {
+    font-family: $other_font, sans-serif;
+    background-color: $footer_color;
+}
+
+#return-top {
+    background: rgba(0, 19, 43, 0.5);
+    width: 20px;
+    transform: scale(2);
+
+    div {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+        width: 10px;
+    }
+}
+
+#page-footer {
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.fix-bot {
+    position: fixed;
+    bottom: 0;
+    right: 48%;
+}
